@@ -10,10 +10,10 @@ const HeroSection = () => {
       <div className="w-[80%] mx-auto flex items-center justify-between">
         {/* Background Animation */}
         <motion.div
-        className="absolute inset-0 w-full h-full bg-[url('/herosection/background.png')] bg-cover bg-center"
-        animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
-        transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-      />
+          className="absolute inset-0 w-full h-full bg-[url('/herosection/background.png')] bg-cover bg-center"
+          animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
+          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+        />
 
         {/* Content */}
         <div className="relative z-10 flex flex-col md:flex-row items-center max-[1335px]:gap-[1rem] w-full mx-auto">

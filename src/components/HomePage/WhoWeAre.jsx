@@ -50,7 +50,7 @@ export default function WhoWeAre() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-black text-white shadow-md px-6 py-3 rounded-lg transition"
               >
-                Read More →
+                Read More ➤
               </motion.button>
             </Link>
           </motion.div>

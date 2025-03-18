@@ -33,7 +33,7 @@ const WhatWeDo = () => {
               alt="Technology"
               width={600}
               height={400}
-              className="rounded-lg object-cover"
+              className="rounded-3xl object-cover"
             />
           </motion.div>
 
@@ -71,7 +71,7 @@ const WhatWeDo = () => {
               className="mt-6 px-5 py-3 bg-black text-white font-bold rounded-lg hover:bg-gray-800 transition"
               whileHover={{ scale: 1.05 }}
             >
-              Read More &gt;&gt;
+              Read More ➤
             </motion.button>
           </motion.div>
         </motion.div>
