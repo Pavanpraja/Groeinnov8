@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section className="relative min-h-screen flex items-center max-[390px]:py-[3rem]">
       <div className="w-[80%] mx-auto flex items-center justify-between">
         {/* Background Animation */}
         <motion.div
