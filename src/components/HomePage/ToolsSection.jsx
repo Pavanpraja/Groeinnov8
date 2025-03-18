@@ -36,7 +36,7 @@ export default function ToolsSection() {
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
-            className="px-1 pt-3 pb-5 bg-white shadow-lg rounded-xl flex flex-col items-center w-28 h-32 md:w-32 md:h-40"
+            className="px-1 pt-3 pb-5 bg-white shadow-lg rounded-xl flex flex-col items-center w-28 md:w-32"
           >
             <Image src={tool.img} alt={tool.name} width={100} height={100} className={`mb-3 w-[5rem] ${index !== 6 ? 'p-3' : 'mt-[-.5rem]'} ${(index === 14 || index === 15) && 'w-[7rem] h-[5rem]'}`} />
             <p className="text-sm font-semibold text-gray-700">{tool.name}</p>
