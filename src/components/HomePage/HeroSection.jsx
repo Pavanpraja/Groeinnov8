@@ -6,15 +6,14 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-[#3F2EFF] flex items-center">
+    <section className="relative min-h-screen flex items-center">
       <div className="w-[80%] mx-auto flex items-center justify-between">
         {/* Background Animation */}
         <motion.div
-          className="absolute inset-0 w-full h-full bg-[url('/herosection/background.png')] bg-cover bg-center opacity-40 backdrop-blur-[2rem]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        />
+        className="absolute inset-0 w-full h-full bg-[url('/herosection/background.png')] bg-cover bg-center"
+        animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
+        transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+      />
 
         {/* Content */}
         <div className="relative z-10 flex flex-col md:flex-row items-center max-[1335px]:gap-[1rem] w-full mx-auto">
@@ -55,8 +54,8 @@ const HeroSection = () => {
             <Image
               src="/herosection/groeinnvo8banner1.png"
               alt="AI Robot"
-              width={500}
-              height={500}
+              width={700}
+              height={700}
               className="rounded-3xl shadow-xl"
             />
           </motion.div>
