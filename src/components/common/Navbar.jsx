@@ -1,27 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/data/navbarData";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import useNavbarScroll from "@/hooks/useNavbarScroll";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolling, setScrolling] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { isOpen, setIsOpen, scrolling } = useNavbarScroll();
 
   return (
     <nav

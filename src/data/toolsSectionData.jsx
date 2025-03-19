@@ -1,0 +1,18 @@
+export const tools = [
+  { name: "Power Apps", img: "/tools/power_apps.png" },
+  { name: "Databricks", img: "/tools/databricks.png" },
+  { name: "Power Automate", img: "/tools/powerautomate.png" },
+  { name: "Open AI", img: "/tools/openai.png" },
+  { name: "Power BI", img: "/tools/powerbi.png" },
+  { name: "Copilot", img: "/tools/copilot.png" },
+  { name: "Power Apps", img: "/tools/powerapps01.png" },
+  { name: "AWS", img: "/tools/aws.png" },
+  { name: "Microsoft AI", img: "/tools/microsoftai.png" },
+  { name: "Blueprism", img: "/tools/blueprism.png" },
+  { name: "Azure", img: "/tools/azure.png" },
+  { name: "Appian", img: "/tools/appian.png" },
+  { name: "Mendix", img: "/tools/mendix.png" },
+  { name: "Automation Anywhere", img: "/tools/automationanywhere.png" },
+  { name: "Tableau", img: "/tools/tableau.png" },
+  { name: "MicroStrategy", img: "/tools/microstrategy.png" },
+];
