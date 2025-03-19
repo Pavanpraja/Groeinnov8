@@ -2,6 +2,7 @@
 
 import { publications } from "@/data/publicationsData";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Publications() {
   return (
@@ -11,8 +12,8 @@ export default function Publications() {
       </h2>
       <div className="flex flex-wrap justify-center gap-6 w-[80%] mx-auto">
         {publications.map((pub, index) => (
+          <Link href={pub.link} key={pub.id}>
           <motion.div
-            key={pub.id}
             className="w-full sm:w-60 xl:w-70 2xl:w-80 bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,6 +38,7 @@ export default function Publications() {
               </a>
             </div>
           </motion.div>
+          </Link>
         ))}
       </div>
     </section>
