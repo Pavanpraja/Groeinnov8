@@ -4,31 +4,122 @@ import { data } from "@/data/whyUsData";
 import { motion } from "framer-motion";
 
 const WhyUs = () => {
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.3 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    hover: { scale: 1.1, transition: { duration: 0.3 } }
+  };
+
   return (
-    <section className="text-white py-16 bg-[#1C1835] z-[-10]">
-      <h2 className="text-3xl md:text-4xl text-blue-600 font-bold mb-12 w-[80%] mx-auto text-center">
-        Why Us
-      </h2>
-      <div className="flex flex-wrap justify-center items-center gap-8 mx-auto w-[80%] relative">
+    <section className="text-slate-800 py-16 bg-white relative overflow-hidden">
+      {/* Background Animation */}
+      <div className="absolute inset-0 z-0">
         <motion.div
-          className="absolute inset-0 w-full h-full bg-[url('/whyus/background.png')] bg-cover bg-center"
-          animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+          className="w-full h-full bg-gradient-to-br from-gray-50 to-white"
+          initial={{ opacity: 0.8 }}
+          animate={{
+            background: [
+              "linear-gradient(45deg, #ffffff 0%, #f8fafc 100%)",
+              "linear-gradient(45deg, #f8fafc 0%, #ffffff 100%)"
+            ]
+          }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
         />
-        {data.map((item, index) => (
+
+        {/* Floating Dots */}
+        <motion.div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 rounded-full bg-blue-200"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
+              }}
+              animate={{
+                opacity: [0.1, 0.6, 0.1],
+                scale: [0.8, 1.2, 0.8]
+              }}
+              transition={{
+                duration: 5 + Math.random() * 5,
+                repeat: Infinity,
+                delay: Math.random() * 5,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </motion.div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-16 text-center"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold inline-block">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600">
+              Why Us
+            </span>
+          </h2>
           <motion.div
-            key={index}
-            className="bg-transparent px-6 py-10 rounded-xl border-[#c667e3] border-[.1rem] shadow-lg flex flex-col items-center text-center w-full sm:w-[48%] lg:w-[30%] z-[100]"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <div className="text-6xl text-blue-400 mb-4">{item.icon}</div>
-            <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-            <p className="text-gray-300">{item.description}</p>
-          </motion.div>
-        ))}
+            className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mt-4"
+            initial={{ width: 0 }}
+            animate={{ width: 96 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          />
+        </motion.div>
+
+        {/* Flexbox Layout */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.1 }}
+          className="flex flex-wrap justify-center gap-12 max-w-6xl mx-auto"
+        >
+          {data.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover="hover"
+              className="relative flex flex-col items-center text-center p-6"
+            >
+              <motion.div
+                className="text-6xl text-blue-500"
+                whileHover={{
+                  rotate: [0, -10, 10, -10, 0],
+                  transition: { duration: 0.5 }
+                }}
+              >
+                {item.icon}
+              </motion.div>
+
+              <h3 className="text-2xl font-bold mt-4 text-slate-800">
+                {item.title}
+              </h3>
+
+              <p className="text-slate-600 leading-relaxed mt-2 max-w-sm">
+                {item.description}
+              </p>
+
+              <motion.div
+                className="w-12 h-0.5 bg-gradient-to-r from-blue-400 to-indigo-500 mt-6"
+                initial={{ width: 0 }}
+                whileInView={{ width: 48 }}
+                transition={{ delay: 0.3 + index * 0.1, duration: 0.8 }}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
