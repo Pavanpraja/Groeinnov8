@@ -33,7 +33,7 @@ export default function WhoWeAre() {
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-blue-600">
               Who we are
             </h2>
-            <p className="text-sm md:text-md leading-relaxed mb-6">
+            <p className="text-sm md:text-md leading-relaxed mb-3">
               Groei Solutions Pvt. Ltd. is a digital transformation company
               founded from India, specialized in a variety of digital
               transformation and innovation using best-in-class Low Code Web/App
@@ -44,6 +44,7 @@ export default function WhoWeAre() {
               like Azure Open AI, AWS Bedrock, Microsoft Co-Pilots, Google
               Vertex, etc.
             </p>
+            <p className="text-sm md:text-md leading-relaxed mb-3">We empower businesses worldwide, including in North America, Europe, and Japan, by delivering advanced, tailored IT solutions. Our team of seasoned experts leverages the latest technologies to build, transform, and manage IT operations, ensuring transparency, honesty, and efficiency in everything we do</p>
             <Link href="/about-us">
               <motion.button
                 whileHover={{ scale: 1.05 }}

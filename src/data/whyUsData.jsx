@@ -4,7 +4,7 @@ import { FaHandshake } from "react-icons/fa6";
 
 export const data = [
   {
-    title: "SHARE YOUR VISION AND CHALLENGES",
+    title: "WORK WITH YOU TO SOLV CHALLENGES",
     description:
       "At Groeinnov8, we begin by understanding your unique challenges and aspirations. We invite you to share your technology hurdles, business objectives, and growth ambitions. Our mission is to fully grasp the intricacies of your needs, ensuring that we align our expertise with your vision from the outset.",
     icon: <AiOutlineTeam />,

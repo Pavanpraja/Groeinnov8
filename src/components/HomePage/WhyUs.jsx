@@ -86,12 +86,12 @@ const WhyUs = () => {
           viewport={{ once: false, amount: 0.1 }}
           className="flex flex-wrap justify-center gap-12 max-w-6xl mx-auto"
         >
-          {data.map((item, index) => (
+          {data?.map((item, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover="hover"
-              className="relative flex flex-col items-center text-center p-6"
+              className="relative flex flex-col items-center text-center p-6 border border-blue-200 rounded-3xl shadow-lg bg-white" 
             >
               <motion.div
                 className="text-6xl text-blue-500"
