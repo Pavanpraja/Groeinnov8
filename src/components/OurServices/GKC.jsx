@@ -73,7 +73,7 @@ export default function GKC() {
     <div className="bg-gradient-to-br from-gray-50 bg-white to-gray-100">
       <div className="w-[80%] mx-auto relative">
         <header className="sticky top-0 z-50">
-          <div className="mx-auto px-4 py-2 flex items-center">
+          <div className="mx-auto py-2 flex items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -137,7 +137,7 @@ export default function GKC() {
 
           {/* About Section */}
           <section id="about" className="py-2">
-            <div className="px-4">
+            <div className="">
               <div className="mb-5">
                 <p
                   className="text-lg text-gray-600"
@@ -210,7 +210,7 @@ export default function GKC() {
 
           {/* Services Section */}
           <section id="services" className="py-16 md:py-24 bg-gray-50">
-            <div className="mx-auto px-4">
+            <div className="mx-auto">
               <div className="space-y-24">
                 {serviceCategories.map((category, categoryIndex) => (
                   <div key={categoryIndex} className="service-category">

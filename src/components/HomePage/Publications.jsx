@@ -12,7 +12,7 @@ export default function Publications() {
       </h2>
       <div className="flex flex-wrap justify-center gap-6 w-[80%] mx-auto">
         {publications.map((pub, index) => (
-          <Link href={pub.link} key={pub.id}>
+          <Link href={pub?.link} key={pub?.id}>
           <motion.div
             className="w-full sm:w-60 xl:w-70 2xl:w-80 bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer"
             initial={{ opacity: 0, y: 50 }}

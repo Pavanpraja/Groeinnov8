@@ -39,7 +39,7 @@ export default function TSC() {
           </p>
         </div>
 
-        <div className="container mx-auto mt-16 px-6 flex flex-col lg:flex-row items-center justify-center gap-8">
+        <div className="mt-16 flex flex-col lg:flex-row items-center justify-center gap-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
