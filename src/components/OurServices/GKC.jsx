@@ -209,7 +209,7 @@ export default function GKC() {
           </section>
 
           {/* Services Section */}
-          <section id="services" className="py-16 md:py-24 bg-gray-50">
+          <section id="services" className="py-16 md:py-24">
             <div className="mx-auto">
               <div className="space-y-24">
                 {serviceCategories.map((category, categoryIndex) => (
