@@ -2,6 +2,7 @@
 
 import { sections } from "@/data/interactiveInfoBlocksData";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function InteractiveInfoBlocks() {
   return (
@@ -30,12 +31,14 @@ export default function InteractiveInfoBlocks() {
               <motion.p className="text-gray-600 mb-4">
                 {section.description}
               </motion.p>
-              <motion.button
-                className="mt-3 px-5 py-3 bg-black text-white font-bold rounded-lg hover:bg-gray-800 transition"
-                whileHover={{ scale: 1.05 }}
-              >
-                Read More ➤
-              </motion.button>
+              <Link href={section?.link}>
+                <motion.button
+                  className="mt-3 px-5 py-3 cursor-pointer bg-black text-white font-bold rounded-lg hover:bg-gray-800 transition"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  Read More ➤
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         ))}

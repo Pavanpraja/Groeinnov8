@@ -70,7 +70,7 @@ export default function GKC() {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 bg-white to-gray-100">
+    <div className="">
       <div className="w-[80%] mx-auto relative">
         <header className="sticky top-0 z-50">
           <div className="mx-auto py-2 flex items-center">

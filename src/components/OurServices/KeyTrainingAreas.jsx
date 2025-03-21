@@ -24,7 +24,7 @@ export default function KeyTrainingAreas() {
         <h1 className="text-3xl font-bold mb-12 text-blue-600">Key Training Areas</h1>
 
         <div 
-          className="relative overflow-hidden min-h-[398px]"
+          className="relative overflow-hidden h-[428px] max-[500px]:h-[462px] max-[414px]:h-[485px]"
           onMouseEnter={pauseAutoScroll}
           onMouseLeave={resumeAutoScroll}
         >
@@ -121,7 +121,7 @@ export default function KeyTrainingAreas() {
           
           <button
             onClick={nextCard}
-            className="absolute right-4 cursor-pointer bottom-1 transform -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-md hover:bg-white focus:outline-none transition-colors duration-300"
+            className="absolute left-28 cursor-pointer bottom-1 transform -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-md hover:bg-white focus:outline-none transition-colors duration-300"
             aria-label="Next slide"
           >
             <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

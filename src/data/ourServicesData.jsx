@@ -38,7 +38,7 @@ export const featuresData = [
       title: "Comprehensive Curriculum",
       description: "Our courses are designed to cover all aspects of the technologies, from basic concepts to advanced applications, making them suitable for beginners and professionals alike.",
       icon: <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />,
-      animation: "fade-left",
+      animation: "fade-bottom",
       delay: 0
     },
     {
@@ -54,7 +54,7 @@ export const featuresData = [
       title: "Support for Talent Acquisition",
       description: "Our training programs not only enhance individual skills but also support our Talent Acquisition services by creating a pool of highly qualified candidates who are ready to meet the needs of the IT industry.",
       icon: <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />,
-      animation: "fade-left",
+      animation: "fade-bottom",
       delay: 200
     }
   ];

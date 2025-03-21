@@ -23,7 +23,7 @@ export default function WhoToTrain() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="text-5xl font-bold text-blue-600 mb-5"
           >
-            Why Train with Groeinnovate?
+            Why To Train with Groeinnov8?
           </motion.h1>
           
           <motion.p
@@ -46,7 +46,7 @@ export default function WhoToTrain() {
             >
               <div className="bg-indigo-100 p-4 rounded-full mb-6">
                 <svg className="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                  {feature.icon}
+                  {feature.icon} 
                 </svg>
               </div>
               <h2 className="text-2xl font-bold text-blue-600 mb-4">{feature.title}</h2>
